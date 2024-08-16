@@ -3,11 +3,9 @@ from openai import OpenAI
 
 # Access Streamlit secrets
 api_key = st.secrets["openai"]["api_key"]
-organization = st.secrets["openai"].get("organization")
-project = st.secrets["openai"].get("project")
 
 # Initialize the OpenAI client
-client = OpenAI(api_key=api_key, organization=organization, project=project)
+client = OpenAI(api_key=api_key)
 
 # Define the system prompt for the AI life coach, David
 system_prompt = """
